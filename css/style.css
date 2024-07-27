@@ -1,0 +1,386 @@
+body {
+  background-color: #191923;
+}
+
+@property --progress-value {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0;
+}
+@-webkit-keyframes html-progress {
+  to {
+    --progress-value: 100;
+  }
+}
+@keyframes html-progress {
+  to {
+    --progress-value: 100;
+  }
+}
+@-webkit-keyframes css-progress {
+  to {
+    --progress-value: 100;
+  }
+}
+@keyframes css-progress {
+  to {
+    --progress-value: 100;
+  }
+}
+@-webkit-keyframes js-progress {
+  to {
+    --progress-value: 50;
+  }
+}
+@keyframes js-progress {
+  to {
+    --progress-value: 50;
+  }
+}
+.progress-bar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  /* to center the percentage value */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) "%";
+}
+
+.html {
+  background: radial-gradient(closest-side, #20202a 79%, transparent 80% 100%), conic-gradient(#ffc107 calc(var(--progress-value) * 1%), pink 0);
+  -webkit-animation: html-progress 2s 1 forwards;
+          animation: html-progress 2s 1 forwards;
+}
+
+.html::before {
+  -webkit-animation: html-progress 2s 1 forwards;
+          animation: html-progress 2s 1 forwards;
+}
+
+.css {
+  background: radial-gradient(closest-side, #20202a 79%, transparent 80% 100%, white 0), conic-gradient(#ffc107 calc(var(--progress-value) * 1%), pink 0);
+  -webkit-animation: css-progress 2s 1 forwards;
+          animation: css-progress 2s 1 forwards;
+}
+
+.css::before {
+  -webkit-animation: css-progress 2s 1 forwards;
+          animation: css-progress 2s 1 forwards;
+}
+
+.js {
+  background: radial-gradient(closest-side, #20202a 79%, transparent 80% 100%, white 0), conic-gradient(#ffc107 calc(var(--progress-value) * 1%), pink 0);
+  -webkit-animation: js-progress 2s 1 forwards;
+          animation: js-progress 2s 1 forwards;
+}
+
+.js::before {
+  -webkit-animation: js-progress 2s 1 forwards;
+          animation: js-progress 2s 1 forwards;
+}
+
+progress {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.progressSkills {
+  width: 100%;
+  height: 7px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 0 !important;
+}
+.progressSkills .progressBarHtml {
+  width: 0%;
+  height: 100%;
+  background-color: #f0b506;
+  border-radius: 20px;
+  -webkit-animation: animHtml 3s forwards;
+          animation: animHtml 3s forwards;
+}
+@-webkit-keyframes animHtml {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes animHtml {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+.progressSkills .progressBarCss {
+  width: 0%;
+  height: 100%;
+  background-color: #f0b506;
+  border-radius: 20px;
+  -webkit-animation: animCss 3s forwards;
+          animation: animCss 3s forwards;
+}
+@-webkit-keyframes animCss {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+@keyframes animCss {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+.progressSkills .progressBarJs {
+  width: 0%;
+  height: 100%;
+  background-color: #f0b506;
+  border-radius: 20px;
+  -webkit-animation: animJs 3s forwards;
+          animation: animJs 3s forwards;
+}
+@-webkit-keyframes animJs {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes animJs {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+.progressSkills .progressBarjquery {
+  width: 0%;
+  height: 100%;
+  background-color: #f0b506;
+  border-radius: 20px;
+  -webkit-animation: animJQ 3s forwards;
+          animation: animJQ 3s forwards;
+}
+@-webkit-keyframes animJQ {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 87%;
+  }
+}
+@keyframes animJQ {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 87%;
+  }
+}
+.progressSkills .progressBarBoot {
+  width: 0%;
+  height: 100%;
+  background-color: #f0b506;
+  border-radius: 20px;
+  -webkit-animation: animBoot 3s forwards;
+          animation: animBoot 3s forwards;
+}
+@-webkit-keyframes animBoot {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+@keyframes animBoot {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+.progressSkills .progressBarSass {
+  width: 0%;
+  height: 100%;
+  background-color: #f0b506;
+  border-radius: 20px;
+  -webkit-animation: animSass 3s forwards;
+          animation: animSass 3s forwards;
+}
+@-webkit-keyframes animSass {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 92%;
+  }
+}
+@keyframes animSass {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 92%;
+  }
+}
+.progressSkills .progressBarGit {
+  width: 0%;
+  height: 100%;
+  background-color: #f0b506;
+  border-radius: 20px;
+  -webkit-animation: animGit 3s forwards;
+          animation: animGit 3s forwards;
+}
+@-webkit-keyframes animGit {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 98%;
+  }
+}
+@keyframes animGit {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 98%;
+  }
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(15%, rgba(45, 45, 58, 0.9)), color-stop(50%, rgba(45, 45, 58, 0.7)), to(rgba(43, 43, 53, 0.7))), url(../img/bg.jpg);
+  background-image: linear-gradient(90deg, rgba(45, 45, 58, 0.9) 15%, rgba(45, 45, 58, 0.7) 50%, rgba(43, 43, 53, 0.7) 100%), url(../img/bg.jpg);
+  height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-position: 50% 50%;
+  color: white;
+}
+header h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.sec1 .divp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+.sec1 .divp .sec1p {
+  color: #ffc107;
+}
+
+.sec2 .info {
+  background-color: #2b2b36;
+  padding: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 25px;
+}
+.sec2 .info a {
+  color: #ffc107;
+  text-decoration: none;
+}
+.sec2 .info h6 {
+  color: white;
+}
+.sec2 .info p {
+  color: #778c8e;
+}
+
+.textanime {
+  width: 323px;
+}
+
+.textanime p {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 3px solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 5px;
+  -webkit-animation: typing 4.5s steps(30), caret 0.8s infinite;
+          animation: typing 4.5s steps(30), caret 0.8s infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+ul li {
+  list-style: none;
+}
